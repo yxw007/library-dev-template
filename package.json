@@ -19,6 +19,8 @@
     "lint:fix": "eslint --fix && prettier -w src",
     "build": "pnpm clean && tsx script/build.ts",
     "clean": "rm -rf dist",
+    "test": "vitest --run",
+    "test:coverage": "vitest --coverage --run",
     "release": "pnpm changelogen --release -i --prerelease",
     "prepare": "husky"
   },
@@ -57,21 +59,26 @@
     "@eslint/js": "^9.9.1",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^22.5.0",
+    "chalk": "^5.3.0",
     "changelogen": "^0.5.5",
     "commitlint": "^19.4.0",
+    "dotenv": "^16.4.5",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
+    "maxmin": "^4.1.0",
     "prettier": "^3.3.3",
     "rollup": "^4.21.1",
     "rollup-plugin-dts": "^6.1.1",
     "tslib": "^2.7.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.3.0"
-  },
-  "peerDependencies": {}
+    "typescript-eslint": "^8.3.0",
+    "vitest": "^2.0.5"
+  }
 }
